@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<div class="results">
+
+<h3>Predicted Result:</h3>
+	{% if prediction == 1%}
+	<h3 style="color:red;">Suspicious</h3>
+	{% elif prediction == 0%}
+	<h3 style="color:blue;">Not Suspicious</h3>
+	{% endif %}
+
+	</div>
+{% endblock %}
